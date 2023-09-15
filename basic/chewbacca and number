@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+     
+      long ans = 0;
+       long mul = 1;
+       while(n!=0){
+           long rem = n%10;
+           if(rem>=5 && n!=9){
+               long k = 9-rem;
+               ans = ans + k*mul;
+           }else{
+               ans = ans +rem *mul;
+           }
+           n=n/10;
+           mul = mul*10;
+       }
+          System.out.println(ans);
+        // Your Code Here
+    }
+}
